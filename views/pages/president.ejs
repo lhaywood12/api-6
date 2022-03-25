@@ -1,0 +1,22 @@
+<%- include('../partials/header'); %>
+
+<main class="main main-presidents">
+    <h2 class="main-h2"><%= name %></h2>
+    <section class="section section-president">
+        <% data.forEach(item => { %>
+            <figure class="figure president-figure">
+                <a href ="/president/<%= item.id %>">
+                <% console.log(item) %>
+                </a>
+                <p><%= item.id%></p>
+                <p><%= item.original%></p>
+                <p><%= item.name%></p>
+                <p><%= item.yearsInOffice%></p>
+                <p><%= item.vicePresidents%></p>
+                <p><%= item.photo %></p>
+            </figure>
+        })
+    </section>
+</main>
+
+<%- include('../partials/footer'); %>
